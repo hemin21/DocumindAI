@@ -1,0 +1,70 @@
+{
+  "dataset": "SciDocs (BEIR benchmark for Computer Science & AI)",
+  "split": "test",
+  "num_evaluated_queries": 1000,
+  "total_documents": 25657,
+  "timestamp": "2026-10-11 20:15:04",
+  "hardware": {
+    "platform": "Windows-11-10.0.26120-SP0",
+    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "python_version": "3.12.6"
+  },
+  "models": {
+    "TF-IDF": {
+      "ngram_range": [
+        1,
+        2
+      ],
+      "stop_words": "english",
+      "max_features": 60000,
+      "sublinear_tf": true
+    },
+    "Semantic": {
+      "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+      "embedding_dimension": 384,
+      "similarity": "cosine (inner product of normalized embeddings)"
+    },
+    "Hybrid": {
+      "alpha": 0.35,
+      "score_fusion": "alpha * norm_tfidf + (1 - alpha) * norm_semantic"
+    }
+  },
+  "summary_results": {
+    "TF-IDF": {
+      "Precision@5": 0.10480000000000002,
+      "Recall@5": 0.10613333333333333,
+      "F1@5": 0.10538333333333336,
+      "MRR": 0.248545703062847,
+      "nDCG@10": 0.1413052138044651,
+      "Mean Latency (ms)": 60.75304179964587,
+      "Median Latency (ms)": 59.10429998766631,
+      "P95 Latency (ms)": 70.19970001420006,
+      "Evaluated Queries": 1000,
+      "Indexed Documents": 25657
+    },
+    "Semantic (all-MiniLM-L6-v2)": {
+      "Precision@5": 0.15719999999999998,
+      "Recall@5": 0.15928333333333336,
+      "F1@5": 0.1581166666666667,
+      "MRR": 0.36571306326112824,
+      "nDCG@10": 0.2157566713199127,
+      "Mean Latency (ms)": 20.729562704684213,
+      "Median Latency (ms)": 19.361949991434813,
+      "P95 Latency (ms)": 31.29978999495506,
+      "Evaluated Queries": 1000,
+      "Indexed Documents": 25657
+    },
+    "Hybrid (TF-IDF + Semantic)": {
+      "Precision@5": 0.1434,
+      "Recall@5": 0.14528333333333335,
+      "F1@5": 0.14422777777777782,
+      "MRR": 0.33837711778675406,
+      "nDCG@10": 0.19877002595756627,
+      "Mean Latency (ms)": 100.86774400132708,
+      "Median Latency (ms)": 96.5738499071449,
+      "P95 Latency (ms)": 127.41900495020671,
+      "Evaluated Queries": 1000,
+      "Indexed Documents": 25657
+    }
+  }
+}

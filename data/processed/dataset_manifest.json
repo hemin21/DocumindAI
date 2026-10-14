@@ -1,0 +1,92 @@
+{
+  "dataset_name": "SciDocs (Scientific Documents & AI / Computer Science)",
+  "benchmark": "BEIR (Benchmarking Information Retrieval)",
+  "source_url": "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/scidocs.zip",
+  "domain": "Artificial Intelligence, Machine Learning, Deep Learning, NLP & Computer Science",
+  "corpus_statistics": {
+    "total_documents": 25657,
+    "empty_documents": 0,
+    "avg_document_word_length": 176.72,
+    "max_document_word_length": 3653,
+    "min_document_word_length": 2,
+    "sample_document_ids": [
+      [
+        "632589828c8b9fca2c3a59e97451fde8fa7d188d",
+        "A hybrid of genetic algorithm and particle swarm optimization for recurrent network design"
+      ],
+      [
+        "86e87db2dab958f1bd5877dc7d5b8105d6e31e46",
+        "A Hybrid EP and SQP for Dynamic Economic Dispatch with Nonsmooth Fuel Cost Function"
+      ],
+      [
+        "2a047d8c4c2a4825e0f0305294e7da14f8de6fd3",
+        "Genetic Fuzzy Systems - Evolutionary Tuning and Learning of Fuzzy Knowledge Bases"
+      ],
+      [
+        "506172b0e0dd4269bdcfe96dda9ea9d8602bbfb6",
+        "A modified particle swarm optimizer"
+      ],
+      [
+        "51317b6082322a96b4570818b7a5ec8b2e330f2f",
+        "Identification and control of dynamic systems using recurrent fuzzy neural networks"
+      ]
+    ]
+  },
+  "query_statistics": {
+    "total_queries": 1000,
+    "avg_query_word_length": 9.44,
+    "max_query_word_length": 25,
+    "min_query_word_length": 2,
+    "sample_queries": [
+      [
+        "78495383450e02c5fe817e408726134b3084905d",
+        "A Direct Search Method to solve Economic Dispatch Problem with Valve-Point Effect"
+      ],
+      [
+        "7dcb308b9292a8bc87d6f7793d2ca5e0e19dfa40",
+        "Bearish-Bullish Sentiment Analysis on Financial Microblogs"
+      ],
+      [
+        "8c872ecd87945e71fcd9fa1b6cb1133cfe805bf2",
+        "Predicting defects in SAP Java code: An experience report"
+      ],
+      [
+        "3a63667284dc8b9687ed1620406030bfe39af3c9",
+        "Active-Metric Learning for Classification of Remotely Sensed Hyperspectral Images"
+      ],
+      [
+        "071f47b7bc5830643e31dbed82e0375bf9b26559",
+        "Ad Hoc Retrieval Experiments Using WordNet and Automatically Constructed Thesauri"
+      ],
+      [
+        "ee9596725d1db17f2b1e2207dd3ea260343bfe4f",
+        "Underwater Acoustic Target Tracking: A Review"
+      ],
+      [
+        "a65196dfff31425281c690a7f2ca65247147da6b",
+        "Unsupervised Diverse Colorization via Generative Adversarial Networks"
+      ],
+      [
+        "a04b5b99f5d9d8748843e870536a4a9f65562012",
+        "Lane Detection ( Part I ) : Mono-Vision Based Method"
+      ]
+    ]
+  },
+  "relevance_splits": {
+    "test": {
+      "num_judgments": 29928,
+      "unique_queries": 1000,
+      "unique_documents": 25657,
+      "grade_distribution": {
+        "1": 4928,
+        "0": 25000
+      }
+    }
+  },
+  "relevance_grades_legend": {
+    "0": "Non-relevant",
+    "1": "Relevant (Citing paper / Cocited / Topic match)"
+  },
+  "license": "CC BY-SA 4.0 / Research Use Only",
+  "reference": "Cohan et al. (2020), SPECTER: Document-level Representation Learning using Citation-informed Transformers. Also BEIR: Thakur et al. (2021) NeurIPS."
+}
